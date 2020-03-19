@@ -12,15 +12,16 @@ import os
 
 
 app = Flask(__name__)
-app.secret_key = "Må byttes ut før GO-live"
 
 
 COVID19_DASHBOARD_LINK = "https://eu1.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.public_folders%2FCOVID19%2FCOVID-19%2BTest&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model00000170ef703302_00000000"
-# os.environ["COVID19_DASHBOARD_LINK"]
+COVID19_DASHBOARD_LINK = os.environ["COVID19_DASHBOARD_LINK"]
 
 
 @app.route("/", methods=["GET", "POST"])
 def init():
+
+    print(COVID19_DASHBOARD_LINK)
 
     return render_template("index.html", dashboard_link=COVID19_DASHBOARD_LINK)
 
