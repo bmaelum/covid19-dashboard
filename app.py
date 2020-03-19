@@ -14,7 +14,6 @@ import os
 app = Flask(__name__)
 
 
-COVID19_DASHBOARD_LINK = "https://eu1.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.public_folders%2FCOVID19%2FCOVID-19%2BTest&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model00000170ef703302_00000000"
 COVID19_DASHBOARD_LINK = os.environ["COVID19_DASHBOARD_LINK"]
 
 
